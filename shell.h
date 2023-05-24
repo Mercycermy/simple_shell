@@ -13,21 +13,21 @@
 
 extern char **environ;
 
-void print_env(void);
+void _env(void);
 
-int _printp(const char *prompt, unsigned int size);
+int printp(const char *prompt, unsigned int size);
 int _putchar(char c);
-int exist(char *pathname);
-void free_grid(char **grid, int heigth);
-void last_free(char *entry);
+int exit_shell(char *pathname);
+void _grid(char **grid, int heigth);
+void _free(char *entry);
 int verify_blt(char **arguments, int exit_stat);
 int _strcmp(char *str1, char *str2);
 int verify_path(char **arguments);
 char *_strdup(char *str);
-char *append_command(char *dir_path, char *command);
-int exec(char **arguments);
+char *_command(char *dir_path, char *command);
+int execute_proc(char **arguments);
 int fill_args(char *entry, char **arguments);
-int print_numbers(int n);
+int printnumbers(int n);
 int _strlen(const char *string);
 int print_not_found(char **arguments, int counter);
 char *_getenv(char *global_var);
